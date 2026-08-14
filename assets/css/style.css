@@ -40,6 +40,13 @@ header {
 #head-nav a:active {
   -webkit-transform: translateX(8px);
   transform: translateX(8px);
+  outline: none;
+}
+
+#head-nav a:focus-visible {
+  outline: 2px solid #ddddda;
+  outline-offset: 4px;
+  border-radius: 2px;
 }
 
 /*head-socials*/
@@ -59,7 +66,7 @@ header {
   transition-duration: 0.3s;
   -webkit-transition-property: box-shadow, transform;
   transition-property: box-shadow, transform;
-  opacity: .75
+  opacity: .75;
 }
 
 #head-socials svg:hover,
@@ -71,13 +78,19 @@ header {
   opacity: 1;
 }
 
+#head-socials a:focus-visible {
+  outline: 2px solid #ddddda;
+  outline-offset: 4px;
+  border-radius: 50%;
+}
+
 /*About*/
 #about {
   padding: 6rem 3rem 0 1rem;
 }
 
 #about p {
-  font-weight: 400
+  font-weight: 400;
 }
 
 #about h5 {
@@ -129,6 +142,12 @@ header {
 #experience .hvr-icon-forward:active .hvr-icon {
   -webkit-transform: translateX(4px);
   transform: translateX(4px);
+}
+
+#experience .hvr-icon-forward:focus-visible {
+  outline: 2px solid #ddddda;
+  outline-offset: 4px;
+  border-radius: 2px;
 }
 
 #experience .card {
@@ -222,6 +241,7 @@ body,
 
   #head-socials {
     margin-top: 3rem;
+    margin-bottom: 2rem;
   }
 
   .sun {
@@ -231,5 +251,27 @@ body,
   #head-section,
   #head-socials ul {
     position: unset !important;
+  }
+
+  #about {
+    padding: 3rem 1rem 0 1rem;
+  }
+
+  #experience {
+    padding-top: 3rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #head-content h1 {
+    font-size: 2.25rem;
+  }
+
+  #head-content h2 {
+    font-size: 1.25rem;
+  }
+
+  #head-nav {
+    margin-top: 2.5rem;
   }
 }
